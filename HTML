@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>搞怪无限弹窗</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffbea;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #f5e1a8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>你永远无法摆脱我...</h1>
+        <button onclick="startPopup()">启动搞怪程序</button>
+    </div>
+    
+    <script>
+        // 弹窗内容数据
+        const popupContent = [
+            {
+                message: "你吃泻药了吗？",
+                image: "https://picsum.photos/400/300?random=1"
+            },
+            {
+                message: "我警告你不要惹我！",
+                image: "https://picsum.photos/400/300?random=2"
+            },
+            {
+                message: "你确定要继续吗？",
+                image: "https://picsum.photos/400/300?random=3"
+            },
+            {
+                message: "游戏才刚刚开始！",
+                image: "https://picsum.photos/400/300?random=4"
+            },
+            {
+                message: "别想关闭我！",
+                image: "https://picsum.photos/400/300?random=5"
+            }
+        ];
+
+        let popupInterval;
+
+        function startPopup() {
+            popupInterval = setInterval(createPopup, 1000);
+        }
+
+        function createPopup() {
+            const randomIndex = Math.floor(Math.random() * popupContent.length);
+            const content = popupContent[randomIndex];
+
+            const popupWindow = window.open("", "_blank", "width=400,height=300");
+            popupWindow.document.write(`
+                <html>
+                <head>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            text-align: center;
+                            background-color: #f5e1a8;
+                            padding: 20px;
+                        }
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            margin: 20px 0;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2>${content.message}</h2>
+                    <img src="${content.image}" alt="搞怪图片">
+                </body>
+                </html>
+            `);
+            popupWindow.document.close();
+        }
+    </script>
+</body>
+</html>
