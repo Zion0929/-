@@ -1,116 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>搞怪无限弹窗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小K - 完全变态生物百科</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fffbea;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
         }
-
         .container {
-            text-align: center;
-            background-color: #f5e1a8;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-            border-radius: 10px;
+            background-color: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #ff6347;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 30px;
-            border: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
         }
-
-        button:hover {
-            background-color: #45a049;
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+        .taxonomy {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>你永远无法摆脱我...</h1>
-        <button onclick="startPopup()">启动搞怪程序</button>
+        <h1>小K (Xiao K)</h1>
+        
+        <div class="taxonomy">
+            <p><strong>科学分类</strong></p>
+            <ul>
+                <li>界：动物界 Animalia</li>
+                <li>门：节肢动物门 Arthropoda</li>
+                <li>纲：昆虫纲 Insecta</li>
+                <li>目：完全变态目 Holometabola</li>
+                <li>科：小K科 XiaoKidae</li>
+                <li>属：小K属 XiaoKus</li>
+                <li>种：完全变态小K XiaoKus holometabolus</li>
+            </ul>
+        </div>
+        
+        <div class="image-container">
+            <img src="https://via.placeholder.com/600x400?text=小K完全变态生命周期" alt="小K完全变态生命周期">
+            <p><em>小K的完全变态生命周期示意图</em></p>
+        </div>
+        
+        <h2>概述</h2>
+        <p>小K（学名：XiaoKus holometabolus）是一种具有完全变态发育特征的独特生物。作为完全变态生物的代表，小K在其生命周期中经历卵、幼虫、蛹和成虫四个截然不同的发育阶段。</p>
+        
+        <h2>形态特征</h2>
+        <h3>成虫形态</h3>
+        <p>成虫体长约2-3厘米，体色多变，通常呈现金属光泽。具有两对翅膀和六足，复眼发达，口器为咀嚼式。</p>
+        
+        <h3>幼虫形态</h3>
+        <p>幼虫呈蠕虫状，体节明显，体长可达5厘米。头部具有强壮的咀嚼式口器，适合啃食各种有机物。</p>
+        
+        <h2>生命周期</h2>
+        <table>
+            <tr>
+                <th>阶段</th>
+                <th>持续时间</th>
+                <th>特征</th>
+            </tr>
+            <tr>
+                <td>卵</td>
+                <td>3-5天</td>
+                <td>椭圆形，白色，直径约1mm</td>
+            </tr>
+            <tr>
+                <td>幼虫</td>
+                <td>2-3周</td>
+                <td>经历5个龄期，大量取食</td>
+            </tr>
+            <tr>
+                <td>蛹</td>
+                <td>7-10天</td>
+                <td>静止期，内部组织重组</td>
+            </tr>
+            <tr>
+                <td>成虫</td>
+                <td>3-4周</td>
+                <td>繁殖期，不取食或少量取食</td>
+            </tr>
+        </table>
+        
+        <h2>生态习性</h2>
+        <p>小K广泛分布于温带和热带地区，栖息于腐殖质丰富的环境中。幼虫主要以腐烂有机物为食，而成虫主要任务是交配和产卵。</p>
+        
+        <div class="warning">
+            <p><strong>注意：</strong>小K的完全变态过程是其最显著的特征，幼虫和成虫在形态、习性和生态位上都有极大差异，这种发育方式使其能够有效利用不同资源，减少种内竞争。</p>
+        </div>
+        
+        <h2>研究意义</h2>
+        <p>小K作为完全变态生物的模式物种，在发育生物学、进化生态学和变态发育遗传机制研究中具有重要价值。科学家通过研究小K的变态过程，揭示了激素调控和基因表达在形态转变中的关键作用。</p>
+        
+        <h2>参考文献</h2>
+        <ol>
+            <li>张某某, 李某某. (2023). 完全变态生物小K的发育生物学研究. 《昆虫学报》, 66(5), 123-135.</li>
+            <li>Wang, X. et al. (2022). Hormonal regulation of metamorphosis in XiaoKus holometabolus. Developmental Biology, 45(3), 234-245.</li>
+        </ol>
+        
+        <p><small>最后更新：2023年11月15日</small></p>
     </div>
-    
-    <script>
-        // 弹窗内容数据
-        const popupContent = [
-            {
-                message: "你吃泻药了吗？",
-                image: "https://picsum.photos/400/300?random=1"
-            },
-            {
-                message: "我警告你不要惹我！",
-                image: "https://picsum.photos/400/300?random=2"
-            },
-            {
-                message: "你确定要继续吗？",
-                image: "https://picsum.photos/400/300?random=3"
-            },
-            {
-                message: "游戏才刚刚开始！",
-                image: "https://picsum.photos/400/300?random=4"
-            },
-            {
-                message: "别想关闭我！",
-                image: "https://picsum.photos/400/300?random=5"
-            }
-        ];
-
-        let popupInterval;
-
-        function startPopup() {
-            popupInterval = setInterval(createPopup, 1000);
-        }
-
-        function createPopup() {
-            const randomIndex = Math.floor(Math.random() * popupContent.length);
-            const content = popupContent[randomIndex];
-
-            const popupWindow = window.open("", "_blank", "width=400,height=300");
-            popupWindow.document.write(`
-                <html>
-                <head>
-                    <style>
-                        body {
-                            font-family: Arial, sans-serif;
-                            text-align: center;
-                            background-color: #f5e1a8;
-                            padding: 20px;
-                        }
-                        img {
-                            max-width: 100%;
-                            height: auto;
-                            margin: 20px 0;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <h2>${content.message}</h2>
-                    <img src="${content.image}" alt="搞怪图片">
-                </body>
-                </html>
-            `);
-            popupWindow.document.close();
-        }
-    </script>
 </body>
 </html>
